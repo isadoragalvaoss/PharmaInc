@@ -1,1 +1,15 @@
+.modal-title {
+  margin-left: 35%;
+  border-radius: 50%;
+  border: 1px solid grey;
+}
 
+.linha1 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.linha2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
