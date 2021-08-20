@@ -10,6 +10,11 @@ function Front() {
   const [searchTermName, setSearchTermName] = useState("");
   const [searchTermGender, setSearchTermGender] = useState("");
   const [loading, setLoading] = useState(true);
+  const [visible, setVisible] = useState(10);
+
+  const loadmore = () => {
+    setVisible((prevValue) => prevValue + 10);
+  };
 
   useEffect(() => {
     axios.get("https://randomuser.me/api/?results=50").then((response) => {
@@ -117,13 +122,15 @@ function Front() {
                     return user;
                   }
                 })
-
+                .slice(0, visible)
                 .map((user) => (
                   <Table user={user} />
                 ))}
             </tbody>
           </table>
-          <button className="btn btn-dark mt-2">Loading More</button>
+          <button className="btn btn-dark mt-2" onClick={loadmore}>
+            Loading More
+          </button>
         </>
       </div>
     </div>
