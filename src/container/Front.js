@@ -40,7 +40,7 @@ function Front() {
 
         <>
           <div className="row">
-            <div className="col-4">
+            <div className="col-md-4">
               <input
                 type="text"
                 className="form-control"
@@ -52,7 +52,7 @@ function Front() {
                 }}
               ></input>
             </div>
-            <div className="col-4">
+            <div className="col-md-4">
               <input
                 type="text"
                 className="form-control"
@@ -64,7 +64,7 @@ function Front() {
                 }}
               ></input>
             </div>
-            <div className="col-4">
+            <div className="col-md-4">
               <select
                 class="form-select"
                 id="inputGroupSelect01"
