@@ -1,8 +1,11 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+import { Modal } from "./components/Modal";
+import { Nav } from "./components/Nav";
+import Front from "./container/Front";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+test("renders nav bar", () => {
+  render(<Nav />);
+  const linkElement = screen.getByText("Pharma");
   expect(linkElement).toBeInTheDocument();
 });
