@@ -101,6 +101,7 @@ function Front() {
                   ) {
                     return user;
                   }
+                  return false;
                 })
                 .filter((user) => {
                   if (searchTermNc === "") {
@@ -110,9 +111,10 @@ function Front() {
                   ) {
                     return user;
                   }
+                  return false;
                 })
                 .filter((user) => {
-                  if (searchTermGender == "neutro") {
+                  if (searchTermGender === "neutro") {
                     console.log("op1");
                     return user;
                   } else if (user.gender.includes(searchTermGender)) {
@@ -121,6 +123,7 @@ function Front() {
                     console.log(s);
                     return user;
                   }
+                  return false;
                 })
                 .slice(0, visible)
                 .map((user) => (

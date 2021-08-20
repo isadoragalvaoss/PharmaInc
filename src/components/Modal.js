@@ -3,7 +3,7 @@ export const Modal = ({ user }) => (
     <div className="modal-dialog">
       <div className="modal-content">
         <div className="modal-header">
-          <img className="modal-title" src={user.picture.large} />
+          <img className="modal-title" src={user.picture.large} alt="Img" />
           <button
             type="button"
             className="btn-close"
